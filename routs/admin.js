@@ -24,7 +24,7 @@ route.get('/logout', async (req,res)=>{
     // res.clearCookie('id');
     req.session.destroy();
     return res.redirect('/admin/');
-})
+});
 
 route.get('/profile' , passport.checkAuthentication ,  admincontroller.profile);
 
